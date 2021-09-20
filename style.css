@@ -18,6 +18,10 @@ a:hover {
     cursor: pointer;
 }
 
+#bloc-0 {
+    padding: 0;
+}
+
 #page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
@@ -134,32 +138,6 @@ a:hover {
 .d-bloc h6 a,
 .d-bloc p a {
     color: rgba(255, 255, 255, .6);
-}
-
-.slogan {
-    font-size: 22px;
-    max-width: 700px;
-    margin: auto;
-}
-
-.citation {
-    font-size: 19px;
-    font-weight: bold;
-    font-style: italic;
-   
-}
-
-.citation-author {
-    font-size: 14px;
-    font-weight: bold;
-   
-}
-
-.portfolio {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 30px;
-    text-transform: initial ;
 }
 
 .d-bloc .a-btn:hover,
@@ -315,6 +293,7 @@ a:hover {
 
 .navbar {
     margin-bottom: 0;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -344,19 +323,19 @@ a:hover {
     padding-top: 2px;
     margin-right: -16px;
     float: right;
+    z-index: 1;
 }
 
 .nav > li {
     float: left;
     margin-top: 4px;
     font-size: 16px;
+    padding: 10px;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
     text-align: inherit;
 }
-
-
 
 .nav > li a:hover,
 .nav > li a:focus {
@@ -385,6 +364,7 @@ a:hover {
 .nav-invert .navbar-brand {
     float: right;
     position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -541,15 +521,13 @@ button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    opacity: 1;
+    opacity: 0;
     z-index: 500;
     transition: all .3s ease-in-out;
-    background: #000;
 }
 
 .scrollToTop span {
     margin-top: 6px;
-    color: white;
 }
 
 .showScrollTop {
@@ -574,6 +552,7 @@ a[data-lightbox]:hover::before {
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
+    z-index: 1;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -618,6 +597,7 @@ a[data-lightbox]:hover img {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 20;
     background: rgba(0, 0, 0, .5);
     border: none;
     line-height: 30px;
@@ -640,6 +620,7 @@ a[data-lightbox]:hover img {
     transition: all .2s ease-in-out;
     position: absolute;
     top: 45%;
+    z-index: 1;
     opacity: 0.4;
 }
 
@@ -701,7 +682,7 @@ a {
 }
 
 p {
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .tight-width-whitespace {
@@ -717,7 +698,6 @@ p {
 .cta-hero {
     margin-top: 22px;
     color: #FFFFFF!important;
-    background: black !important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -725,16 +705,9 @@ p {
 }
 
 .social {
-    color: white !important;
-    max-width: 500px;
+    max-width: 400px;
     margin: auto auto auto auto;
 }
-
-.social a {
-    color: white !important;
-    padding-left: 10px;
-}
-
 
 h2 {
     font-size: 22px;
@@ -790,26 +763,9 @@ h4 {
 }
 
 .bold-link {
-    font-size: 18px;
-    padding: 18px;
-    border-radius: 200px;
-    background: black;
-    margin: 20px !important;
-    font-weight: 700;
+    font-weight: 900;
+    text-decoration: underline!important;
 }
-
-.bold-link:hover {
-    background: white !important;
-    color: black !important;
-    transition: 0.3s;
-}
-
-.bold-link:hover a {
-    background: white !important;
-    color: black !important;
-    transition: 0.3s;
-}
-
 
 .bgc-white {
     background-color: #FFFFFF;
@@ -820,11 +776,11 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: black !important;
+    background-color: #F3976C;
 }
 
 .tc-white {
-    color: white !important;
+    color: #F3976C!important;
 }
 
 .btn-atomic-tangerine {
@@ -833,8 +789,8 @@ h4 {
 }
 
 .btn-atomic-tangerine:hover {
-    background: white!important;
-    color: black!important;
+    background: #c27956!important;
+    color: #FFFFFF!important;
 }
 
 .ltc-white {
@@ -867,11 +823,11 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.webp");
+    background-image: url("img/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.webp");
+    background-image: url("img/image-de-presentation.bmp");
 }
 
 @media (max-width: 1024px) {
@@ -1047,7 +1003,9 @@ h4 {
     .a-block {
         padding: 0 10px;
     }
-  
+    .btn-dwn {
+        display: none;
+    }
     .voffset {
         margin-top: 5px;
     }
